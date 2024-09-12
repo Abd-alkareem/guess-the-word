@@ -1,0 +1,155 @@
+/*  */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: relative;
+    height: 100vh;
+    font-family: "Playpen Sans", cursive;
+}
+
+.main-container {
+    max-width: 1000px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.main-container .game-title {
+    display: block;
+    width: 100%;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.main-container .holder {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.main-container .holder .game-section {
+    flex: 1;
+}
+
+.main-container .holder .game-section .try-div {
+    margin-bottom: 20px;
+}
+
+.main-container .holder .game-section .try-div.disabled {
+    opacity: 0.4;
+}
+
+.main-container .holder .game-section .try-div span {
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    color: rgb(141, 139, 139);
+    text-transform: capitalize;
+}
+
+.main-container .holder .game-section .try-div .letter-input {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    border: none;
+    border-bottom: 2px solid #9E9E9E;
+    border-radius: 0;
+    background-color: #e8e8e8;
+    text-align: center;
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+.main-container .holder .game-section .try-div .letter-input:focus {
+    border: 1px solid red;
+}
+
+.main-container .holder .game-section .try-div .letter-input.yes-in-place {
+    background-color: #00967a;
+}
+
+.main-container .holder .game-section .try-div .letter-input.yes-no-place {
+    background-color: #ffbf00;
+}
+
+.main-container .holder .game-section .try-div .letter-input.wrong-letter {
+    background-color: grey;
+}
+
+.main-container .holder .game-section .controle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.main-container .holder .game-section .controle button {
+    padding: 10px 24px;
+    border: 1px solid transparent;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.main-container .holder .game-section .controle .check-btn {
+    background-color: #E91E63;
+
+}
+
+.main-container .holder .game-section .controle .hint-btn {
+    background-color: #00BCD4;
+}
+
+.main-container .holder .kays-section {
+    padding: 0 10px;
+    max-width: 400px;
+}
+
+.main-container .holder .kays-section .letter-type {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+}
+
+.main-container .holder .kays-section .letter-type .color {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.main-container .holder .kays-section .letter-type .color.yes-in-place {
+    background-color: #00967a;
+}
+
+.main-container .holder .kays-section .letter-type .color.yes-no-place {
+    background-color: #ffbf00;
+}
+
+.main-container .holder .kays-section .letter-type .color.wrong-letter {
+    background-color: grey;
+}
+
+.main-container .holder .kays-section .letter-type .text {
+    text-transform: capitalize;
+
+}
+
+.main-container .footer {
+    padding: 20px;
+    background-color: black;
+    margin-top: 20px;
+
+}
