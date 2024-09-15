@@ -16,13 +16,23 @@
   </head>
   <body>
     <div class="main-container">
-      <h1 class="game-title"></h1>
+      <div class="overlay"></div>
+      <header>
+        <h1 class="game-title"></h1>
+        <select name="level" id="" class="level">
+          <option value="1">level 1</option>
+          <option value="2">level 2</option>
+          <option value="3">level 3</option>
+        </select>
+      </header>
+      <div class="discreption"></div>
       <div class="holder">
+        <div class="message"></div>
         <div class="game-section">
           <div class="inputs"></div>
           <div class="controle">
             <button class="check-btn">check word</button>
-            <button class="hint-btn">hint</button>
+            <button class="hint-btn"></button>
           </div>
         </div>
         <div class="kays-section">
@@ -44,7 +54,7 @@
           </div>
         </div>
       </div>
-      <div class="footer"></div>
+      <div class="footer">Made by ABD-Alkareem</div>
 
       <!--  -->
       <script src="main.js"></script>

@@ -4,27 +4,70 @@ body {
     padding: 0;
     background-color: #333;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     font-family: "Playpen Sans", cursive;
+    box-sizing: border-box;
 }
 
 .main-container {
-    max-width: 1000px;
     width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding-top: 10px;
     background-color: white;
+    overflow: hidden;
+}
+
+.main-container .discreption {
+    display: block;
+    width: 90%;
+    margin: 0 0 22px;
+    padding-left: 10px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.main-container .discreption span {
+    color: rgb(114, 108, 108);
+    font-weight: initial;
+    margin: 4px 0;
+    display: inline-block;
+}
+
+.main-container .overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00000038;
+}
+
+.main-container .overlay.active {
+    display: block;
+}
+
+.main-container header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.main-container header select {
+    border: 1px solid #333;
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-style: italic;
 }
 
 .main-container .game-title {
     display: block;
-    width: 100%;
     text-transform: capitalize;
     text-align: center;
     font-size: 22px;
-    margin-bottom: 30px;
 }
 
 .main-container .holder {
@@ -34,8 +77,49 @@ body {
     gap: 20px;
 }
 
+@media(max-width:991px) {
+    .main-container .holder {
+        flex-direction: column;
+    }
+}
+
+.main-container .holder .message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 350px;
+    width: 80%;
+    height: 150px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 11;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    font-size: 18px;
+    gap: 5px;
+}
+
+.main-container .holder .message.active {
+    display: flex;
+}
+
+.main-container .holder .message span {
+    font-weight: 500;
+    color: red;
+}
+
 .main-container .holder .game-section {
     flex: 1;
+}
+
+@media(max-width:991px) {
+    .main-container .holder .game-section {
+        width: 100%;
+    }
 }
 
 .main-container .holder .game-section .try-div {
@@ -43,7 +127,7 @@ body {
 }
 
 .main-container .holder .game-section .try-div.disabled {
-    opacity: 0.4;
+    opacity: 0.5;
 }
 
 .main-container .holder .game-section .try-div span {
@@ -64,12 +148,14 @@ body {
     border-radius: 0;
     background-color: #e8e8e8;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     text-transform: capitalize;
+    caret-color: #9E9E9E;
 }
 
 .main-container .holder .game-section .try-div .letter-input:focus {
-    border: 1px solid red;
+    outline: none;
+    background-color: #e0e3d7;
 }
 
 .main-container .holder .game-section .try-div .letter-input.yes-in-place {
@@ -102,10 +188,25 @@ body {
     cursor: pointer;
 }
 
+.main-container .holder .game-section .controle button.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.main-container .holder .game-section .controle button i {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.main-container .holder .game-section .controle button::selection {
+    background-color: transparent;
+}
+
 .main-container .holder .game-section .controle .check-btn {
     background-color: #E91E63;
 
 }
+
 
 .main-container .holder .game-section .controle .hint-btn {
     background-color: #00BCD4;
@@ -114,6 +215,14 @@ body {
 .main-container .holder .kays-section {
     padding: 0 10px;
     max-width: 400px;
+}
+
+@media(max-width:991px) {
+    .main-container .holder .kays-section {
+        max-width: initial;
+        width: 90%;
+        margin-top: 30px;
+    }
 }
 
 .main-container .holder .kays-section .letter-type {
@@ -148,8 +257,11 @@ body {
 }
 
 .main-container .footer {
-    padding: 20px;
+    padding: 14px 20px;
     background-color: black;
     margin-top: 20px;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
 
 }
